@@ -1,3 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final selectedWalletProvider = Provider<int>((ref) => throw UnimplementedError());
+final selectedWalletProvider =
+    Provider.autoDispose<int>((ref) => throw UnimplementedError());

@@ -12,7 +12,12 @@ class WalletInfoScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final wallet = ref.watch(WalletInfoProvider.provider(ref.read(selectedWalletProvider)));
+    final wallet = ref.watch(
+      walletInfoProvider(
+        ref.read(selectedWalletProvider),
+      ),
+    );
+
     return Scaffold(
       body: Center(
         child: Text(wallet.id.toString()),
