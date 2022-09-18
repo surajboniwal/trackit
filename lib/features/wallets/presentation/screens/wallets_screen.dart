@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:trackit/shared/providers/formatted_currency_provider.dart';
 import '../mixins/bottomsheet_mixin.dart';
 import '../providers/wallet_total_provider.dart';
 import '../providers/wallets_provider.dart';
@@ -45,8 +46,9 @@ class TotalBalanceSection extends StatelessWidget {
         Consumer(
           builder: (context, ref, child) {
             final total = ref.watch(WalletTotalProvider.provider);
+            final formattedTotal = ref.watch(formattedCurrencyProvider(total));
             return Text(
-              "₹$total",
+              formattedTotal,
               style: const TextStyle(
                 fontSize: 28.0,
                 fontWeight: FontWeight.bold,

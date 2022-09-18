@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../core/theme/app_colors.dart';
+import '../../../../shared/providers/formatted_currency_provider.dart';
 import '../screens/wallet_info_screen.dart';
 
 import '../providers/single_wallet_provider.dart';
@@ -14,6 +15,8 @@ class WalletTile extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final wallet = ref.watch(singleWalletProvider);
+    final formattedTotal = ref.watch(formattedCurrencyProvider(wallet.balance));
+
     return GestureDetector(
       onTap: () {
         GoRouter.of(context).goNamed(
@@ -57,7 +60,7 @@ class WalletTile extends ConsumerWidget {
                 ),
                 const SizedBox(height: 4.0),
                 Text(
-                  "₹${wallet.balance}",
+                  formattedTotal,
                   style: const TextStyle(
                     color: AppColors.text,
                     fontWeight: FontWeight.bold,
