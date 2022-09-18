@@ -28,6 +28,10 @@ class NavigationScreen extends StatelessWidget {
                 icon: Icon(Icons.wallet_rounded),
                 label: 'Wallets',
               ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.more_horiz_rounded),
+                label: 'More',
+              ),
             ],
           );
         },
@@ -41,6 +45,7 @@ class NavigationScreen extends StatelessWidget {
             children: [
               Container(color: Colors.deepOrangeAccent),
               const WalletsScreen(),
+              Container(color: Colors.tealAccent),
             ],
           );
         },
