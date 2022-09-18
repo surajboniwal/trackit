@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:trackit/features/wallets/presentation/providers/wallets_provider.dart';
+import 'wallets_provider.dart';
 
 import '../../data/models/wallet.dart';
 
@@ -12,12 +12,10 @@ class WalletTotalProvider extends StateNotifier<int> {
     });
   }
 
-  static final provider =
-      StateNotifierProvider.autoDispose<WalletTotalProvider, int>(
+  static final provider = StateNotifierProvider.autoDispose<WalletTotalProvider, int>(
     (ref) {
-      final _total = ref
-          .read(WalletsProvider.provider)
-          .fold<int>(0, (sum, item) => sum + item.balance);
+      final _total =
+          ref.read(WalletsProvider.provider).fold<int>(0, (sum, item) => sum + item.balance);
       return WalletTotalProvider(_total, ref);
     },
   );

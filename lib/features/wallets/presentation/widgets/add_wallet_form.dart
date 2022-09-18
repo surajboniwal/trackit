@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:trackit/core/theme/app_colors.dart';
-import 'package:trackit/features/wallets/data/models/wallet.dart';
-import 'package:trackit/features/wallets/presentation/providers/wallet_count_provider.dart';
+import '../../../../core/theme/app_colors.dart';
+import '../../data/models/wallet.dart';
+import '../providers/wallet_count_provider.dart';
 
 class AddWalletForm extends StatefulWidget {
   const AddWalletForm({
@@ -183,8 +183,7 @@ class RoundedButton extends StatelessWidget {
         width: double.maxFinite,
         decoration: BoxDecoration(
           color: AppColors.primary,
-          borderRadius:
-              BorderRadius.circular(height != null ? height! / 2 : 28),
+          borderRadius: BorderRadius.circular(height != null ? height! / 2 : 28),
         ),
         child: Text(
           label,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:trackit/features/wallets/presentation/mixins/bottomsheet_mixin.dart';
-import 'package:trackit/features/wallets/presentation/providers/wallet_total_provider.dart';
-import 'package:trackit/features/wallets/presentation/providers/wallets_provider.dart';
+import '../mixins/bottomsheet_mixin.dart';
+import '../providers/wallet_total_provider.dart';
+import '../providers/wallets_provider.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../providers/single_wallet_provider.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:trackit/features/wallets/presentation/providers/selected_wallet_provider.dart';
-import 'package:trackit/features/wallets/presentation/screens/wallet_info_screen.dart';
+import '../../features/wallets/presentation/providers/selected_wallet_provider.dart';
+import '../../features/wallets/presentation/screens/wallet_info_screen.dart';
 import '../../features/navigation/presentation/screens/navigation_screen.dart';
 
 class AppRouter {

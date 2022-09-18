@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:trackit/core/theme/app_colors.dart';
-import 'package:trackit/features/wallets/presentation/screens/wallet_info_screen.dart';
+import '../../../../core/theme/app_colors.dart';
+import '../screens/wallet_info_screen.dart';
 
 import '../providers/single_wallet_provider.dart';
 

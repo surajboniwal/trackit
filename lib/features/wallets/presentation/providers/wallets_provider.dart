@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:trackit/features/wallets/data/repositories/wallet_repository.dart';
+import '../../data/repositories/wallet_repository.dart';
 
 import '../../data/models/wallet.dart';
 

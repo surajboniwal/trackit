@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:trackit/features/wallets/presentation/providers/selected_wallet_provider.dart';
-import 'package:trackit/features/wallets/presentation/providers/wallet_info_provider.dart';
+import '../providers/selected_wallet_provider.dart';
+import '../providers/wallet_info_provider.dart';
 
 class WalletInfoScreen extends ConsumerWidget {
   const WalletInfoScreen({
